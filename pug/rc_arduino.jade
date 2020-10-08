@@ -1,0 +1,262 @@
+doctype html
+html(lang='en')
+  head
+    meta(content="text/html; charset=UTF-8", http-equiv="Content-Type")
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    | 	  
+    link(rel="stylesheet", href="css/rc_arduino.css")
+    link(rel="stylesheet", href="css/movepic.css")
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
+    link(href='open-iconic-master/font/css/open-iconic-bootstrap.css', rel='stylesheet')
+    |   
+    title 陳泰元・期末報告補充
+  body
+    .takeup
+        a(href="#")
+            span.oi.oi-arrow-thick-top 
+    nav.navbar.fixed-top.navbar-expand-lg.navbar-dark(style='background-color:#355772;')
+      a.navbar-brand(href='index.html') 
+        img.d-inline-block.align-top(src='images/phy_icon.png', width='30', height='30', alt='')
+        |    &nbsp;&nbsp;   *泰元'S 普物筆記*
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+          li.nav-item
+            a.nav-link(href='index.html')
+              | 首頁 
+            span.sr-only (current)
+          li.nav-item.dropdown
+            a#navbarDropdown.nav-link.dropdown-toggle.active(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+              | 基礎電子學
+            .dropdown-menu(aria-labelledby='navbarDropdown')
+              a.dropdown-item(href='c_inro.html') 電容原理與公式
+              a.dropdown-item(href='inductor.html') 電感原理與公式
+              a.dropdown-item(href='transistor.html') 電晶體原理
+              a.dropdown-item(href='4069.html') 反向器4069初探
+              .dropdown-divider
+              a.dropdown-item(href='ch1_new.html') 第一章心得整理與分享
+              a.dropdown-item.active(href='rc_arduino.html') 期末報告補充
+          li.nav-item.dropdown  
+            a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+              | 實驗教學
+            .dropdown-menu(aria-labelledby='navbarDropdown')
+              a.dropdown-item(href='viewwave.html') 示波器
+              .dropdown-divider
+              a.dropdown-item(href='trig.html') 電容的放電與充電波形圖
+    #container
+      #header
+      |   
+      #sidebar
+        #content
+          .title 期末報告補充
+          |     
+          .learn
+            br
+            br  
+            span.important Circuit Lab介紹
+            | 		  
+            br
+            |
+            br 		  
+            blockquote
+              p
+                | 一個可以
+                strong 畫線路
+                | 的網站
+              | 		    
+              .tip
+                | Circuit Lab（電路實驗室）
+                br
+                |
+                br 				
+                blockquote
+                  | 連結網址：
+                  a(href="https://www.circuitlab.com", target="_blank") https://www.circuitlab.com
+              |
+              br
+              br 		    
+              p
+                img(src="images/circuit1.png", class="img-fluid",width="500px", alt="")
+              | 		    
+              p  
+              | 		    
+              p  
+              | 		    
+              p
+                | 它可以幫助我們
+                strong 輕鬆地畫出
+                | 所需的電路圖
+              | 		    
+              p
+                img(src="images/circuit2.png",class="img-fluid", width="500px", alt="")
+              | 		    
+              p  
+              | 		    
+              p
+                | 還可以輸出成PDF 輕鬆把自己的
+                strong 想法分享
+                | 給其他人
+              | 		    
+              p
+                img(src="images/circuit_pdf.png", class="img-fluid",width="500px", alt="")
+              | 		    
+              p 對之後的應用電子學課程有很大的幫助！
+              br
+              br
+              | 		    
+              p
+                span.important ThinkerCAD介紹
+              | 		    
+              p
+                | 它是 AutoCAD 公司出品的線上
+                strong 3D電路模擬網站
+              | 		    
+              .tip
+                | ThinkerCAD
+                br
+                br
+                blockquote
+                  | 連結網址：
+                  a(href="https://www.tinkercad.com/circuits", target="_blank") https://www.tinkercad.com/circuits
+              |
+              br
+              br 			  
+              p
+                | 如果想要模擬電路，而且想要有
+                strong 「真正接電路的感覺」
+              | 			  
+              p 這個網站絕對是第一首選！！
+              | 			  
+              p
+                img(src="images/thinkercad.png",class="img-fluid", width="500px", alt="")
+              | 			  
+              p  
+              |
+              br
+              br
+              br 			  
+              p
+                span.important 自己試做的電容電路-延遲切換(配合Arduino)
+              | 			  
+              p
+                img(src="images/low_greenshow.JPG",class="img-fluid", width="400px", alt="")
+                img(src="images/high_redshow.JPG", class="img-fluid",width="400px", alt="")
+              | 			  
+              p
+                | 當手
+                strong 沒有遮住
+                | 光敏電阻（光電池）時->
+                strong 綠色燈亮
+              | 			  
+              p
+                | 當手
+                strong 遮住
+                | 光敏電阻（光電池）時->綠色燈將
+                strong 繼續亮
+                | 一段時間->再切換成
+                strong 紅色燈亮
+              | 			  
+              br
+              | 			  
+              .tip
+                | 光敏電阻(光電池)(PhotoCell)
+                br
+                | 				  
+                blockquote
+                  p
+                    | 是一種
+                    strong 可變電阻
+                    | ，會依照接觸到它的表面光線的量來改變它的電阻值 
+                    br
+                  | 					  
+                  p
+                    | 有光線時->電阻值下降
+                    br
+                    | 					    沒有光線時->電阻值上升
+                  | 					  
+                  p
+                    img(src="images/光敏電阻.jpg",class="img-fluid", width="300px", alt="")
+              |
+              br
+              br 			  
+              p 模擬電路圖：
+              | 			  
+              p
+                img(src="images/Fantabulous Juttuli.png", class="img-fluid",width="800px", alt="")
+              | 			  
+              p  
+              | 			  
+              p 程式碼：
+              | 			  
+              p
+                img(src="images/code.png", class="img-fluid",width="500px", alt="")
+              | 			  
+              p 一般時候（不用手遮光敏電阻時） 電阻值下降
+              | 			  
+              p 電流幾乎跑光敏電阻這向
+              | 			  
+              p
+                strong 電容並無接受到太大電流對它充電
+              | 			  
+              p 這時Arduino知道該處為低電位 因此讓綠燈亮起
+              | 			  
+              p
+                img(src="images/big-1.png", class="img-fluid",width="600px", alt="")
+              | 			  
+              p  
+              | 			  
+              p 當手遮光敏電阻時 電阻值上升
+              | 			  
+              p
+                | 電流幾乎改跑電容方向
+                strong  此時電容開始充電（往高電位跑）
+              | 		    
+              p 這時Arduino知道該處為高電位 因此讓紅燈亮起
+              | 		    
+              p
+                img(src="images/big-2.png", class="img-fluid",width="600px", alt="")
+              | 		    
+              p  
+              | 		    
+              p 當手指再次遮住光敏電阻時 則又等於電容該處開關被關起來
+              | 		    
+              p
+                strong 似同斷路 因此電位又降為低電位
+              | 		    
+              p  
+              | 		    
+              p 實驗影片：
+              | 		    
+              p
+                em 未加電容
+              |             
+              iframe(width="560", height="315", src="https://www.youtube.com/embed/KGEyHfNuxC0?rel=0", frameborder="0", allow="autoplay; encrypted-media", allowfullscreen="")
+              | 		    
+              p  
+              | 		    
+              p
+                em 加上電阻
+              |             
+              iframe(width="560", height="315", src="https://www.youtube.com/embed/L9nKBlwaRr8?rel=0", frameborder="0", allow="autoplay; encrypted-media", allowfullscreen="")
+              | 		    
+              p
+              .jumbotron
+                h1.display-4 謝謝您的支持！！
+                br
+                |           
+                p.lead 您的意見    是我改進的原動力
+                |           
+                p.lead 歡迎您將閱讀後的心得告訴我    讓我可以更加進步～～
+                |           
+                hr.my-4
+                |           
+                p
+                    img.img-fluid(src="images/emil_icon.png", width="30px", alt="")
+                    |    chen.oscar@hotmail.com
+                |           
+                p 資訊科學系   一年甲班   陳泰元
+      #footer 陳泰元・普通物理（下）成果網頁
+      script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js', integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN', crossorigin='anonymous')
+      script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q', crossorigin='anonymous')
+      script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl', crossorigin='anonymous')              

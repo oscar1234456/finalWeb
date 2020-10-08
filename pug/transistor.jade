@@ -1,0 +1,229 @@
+doctype html
+html
+  head
+    meta(content="text/html; charset=UTF-8", http-equiv="Content-Type")
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    | 	  
+    link(rel="stylesheet", href="css/transistor.css")
+    link(rel="stylesheet", href="css/movepic.css")
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
+    link(href='open-iconic-master/font/css/open-iconic-bootstrap.css', rel='stylesheet')
+    title 陳泰元·電晶體原理   
+  body
+    .takeup
+        a(href="#")
+            span.oi.oi-arrow-thick-top 
+    nav.navbar.fixed-top.navbar-expand-lg.navbar-dark(style='background-color:#355772;')
+      a.navbar-brand(href='index.html') 
+        img.d-inline-block.align-top(src='images/phy_icon.png', width='30', height='30', alt='')
+        |    &nbsp;&nbsp;   *泰元'S 普物筆記*
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+          li.nav-item
+            a.nav-link(href='index.html')
+              | 首頁 
+            span.sr-only (current)
+          li.nav-item.dropdown
+            a#navbarDropdown.nav-link.dropdown-toggle.active(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+              | 基礎電子學
+            .dropdown-menu(aria-labelledby='navbarDropdown')
+              a.dropdown-item(href='c_inro.html') 電容原理與公式
+              a.dropdown-item(href='inductor.html') 電感原理與公式
+              a.dropdown-item.active(href='transistor.html') 電晶體原理
+              a.dropdown-item(href='4069.html') 反向器4069初探
+              .dropdown-divider
+              a.dropdown-item(href='ch1_new.html') 第一章心得整理與分享
+              a.dropdown-item(href='rc_arduino.html') 期末報告補充
+          li.nav-item.dropdown  
+            a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+              | 實驗教學
+            .dropdown-menu(aria-labelledby='navbarDropdown')
+              a.dropdown-item(href='viewwave.html') 示波器
+              .dropdown-divider
+              a.dropdown-item(href='trig.html') 電容的放電與充電波形圖
+    #container
+      #header
+      |   
+      #sidebar
+        #content
+          .title 電晶體的原理 
+          .learn
+            br
+            br
+            span.important 用途
+            | 		  
+            br
+            | 		  
+            blockquote
+              br
+              li 開關
+              | 			
+              img(src="images/電晶體作用.png",class="img-fluid",  alt="", width="500px")
+              | 			
+              br
+              | 			
+              br
+              |
+              br
+              br 			
+              li 放大器
+              | 			
+              img(src="images/電晶體作用擴大.png",class="img-fluid",  alt="", width="500px")
+              | 			 
+              br
+              | 			  
+              br
+              |
+              br
+              br 		    
+              li 邏輯閘
+              | 		    
+              img(src="images/電晶體當邏輯閘.png", class="img-fluid", alt="", width="500px")
+            | 		  
+            br
+            |
+            br
+            br
+            br 		  
+            span.important 原理
+            | 		  
+            br
+            | 			  
+            blockquote
+              br
+              br
+              li 半導體原理
+              | 				  
+              blockquote
+                | P型半導體->產生電洞（移動慢）
+                br
+                | 					  N型半導體->產生自由電子（移動快）
+                | 					  
+                br
+                br
+                .tip  注意不管Ｐ型還是Ｎ型半導體皆是不帶電！
+                | 					  
+                br
+                | 				    
+                img(src="images/p型半導體.png",class="img-fluid",  alt="", width="500px")
+                | 					  
+                br
+                | 				    
+                img(src="images/n型半導體.png", class="img-fluid", alt="", width="500px")
+                | 					  
+                br
+                | 					  
+                br
+                | 					  如果Ｐ型和Ｎ型接在一起->將會造成填補電洞的現象發生->空泛層(Diode)
+                | 					  
+                br
+                | 				    
+                img(src="images/空泛層介面.png",class="img-fluid",  alt="", width="500px")
+              | 				  
+              br
+              |
+              br
+              br 				
+              li 互接相反方向半導體->電晶體
+              | 			    
+              blockquote
+                img(src="images/電晶體pnp.png", class="img-fluid", alt="", width="500px")
+                | 					  
+                br
+                | 					  
+                br
+                | 					  其實就很像（ＮＰ）（ＰＮ）的接法
+                | 					  
+                br
+                | 				  
+                img(src="images/接上電晶體.png",class="img-fluid",  alt="", width="500px")
+                | 					  
+                br
+                | 					  
+                br
+                | 					  如果在左上角接上另一顆電池形成迴路(則左半邊電子會不斷填補電洞)
+                | 					  
+                br
+                | 					  
+                img(src="images/電晶體左上構造.png", class="img-fluid",alt="", width="500px")
+                br
+                | 					  將會造成
+                | 					  
+                br
+                | 				  
+                img(src="images/電晶體電流.png",class="img-fluid", alt="", width="500px")
+                | 					  
+                br
+                | 					  
+                br
+                | 					  電流方向示意
+                | 					  
+                br
+                | 				  
+                img(src="images/電晶體電流方向.png",class="img-fluid", alt="", width="500px")
+                | 					  
+                br
+                | 					  
+                br
+                | 					  如果接上負載電路
+                | 					  
+                br
+                | 				  
+                img(src="images/電晶體電流2.png", class="img-fluid",alt="", width="500px")
+                | 					  
+                br
+                | 					  因此可以藉此來產生電流
+                | 					
+                br
+                | 				    
+                br
+                | 					
+                img(src="images/npn電感示意圖.png",class="img-fluid", alt="", width="500px")
+            br
+            br
+            br 		
+            span.important 心得
+            | 				
+            blockquote
+              br
+              p 第一次見到的電子元件，未來我想用到他的機率一定很高！
+              p 雖然目前還未學到它的應用，但是在之後一定能有機會體會它的強大！
+            br
+            br
+            br 		
+            span.important 上課教材
+            | 		
+            blockquote
+              p
+                a(href="http://irobot.ntue.edu.tw/physics/Electrical/BJT/BJT.htm", target="_blank") 電晶體（Transistor）_黃聰耀 老師
+              | 		  
+              p
+                a(href="https://www.youtube.com/watch?v=7ukDKVHnac4", target="_blank") Transistors,How do they work? (Youtube)
+                br
+                iframe(width="560", height="315", src="https://www.youtube-nocookie.com/embed/7ukDKVHnac4?rel=0", frameborder="0", allow="autoplay; encrypted-media", allowfullscreen="")
+              | 		  
+              p
+                a(href="https://www.youtube.com/watch?v=Bine_PbyFSQ", target="_blank") Transistors - Field Effect and Bipolar Transistors: MOSFETS and BJTs (Youtube)
+                br
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Bine_PbyFSQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            .jumbotron
+                h1.display-4 謝謝您的支持！！
+                br
+                |           
+                p.lead 您的意見    是我改進的原動力
+                |           
+                p.lead 歡迎您將閱讀後的心得告訴我    讓我可以更加進步～～
+                |           
+                hr.my-4
+                |           
+                p
+                    img.img-fluid(src="images/emil_icon.png", width="30px", alt="")
+                    |    chen.oscar@hotmail.com
+                |           
+                p 資訊科學系   一年甲班   陳泰元
+      #footer 陳泰元・普通物理（下）成果網頁
+      script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js', integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN', crossorigin='anonymous')
+      script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q', crossorigin='anonymous')
+      script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl', crossorigin='anonymous')

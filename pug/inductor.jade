@@ -1,0 +1,207 @@
+doctype html
+html
+  head
+    meta(content="text/html; charset=UTF-8", http-equiv="Content-Type")
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    | 	  
+    link(rel="stylesheet", href="css/inductor.css")
+    link(rel="stylesheet", href="css/movepic.css")
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
+    link(href='open-iconic-master/font/css/open-iconic-bootstrap.css', rel='stylesheet')
+    |   
+    title 陳泰元・電感原理與公式
+  |   
+  body
+    .takeup
+        a(href="#")
+            span.oi.oi-arrow-thick-top 
+    nav.navbar.fixed-top.navbar-expand-lg.navbar-dark(style='background-color:#355772;')
+      a.navbar-brand(href='index.html') 
+        img.d-inline-block.align-top(src='images/phy_icon.png', width='30', height='30', alt='')
+        |    &nbsp;&nbsp;   *泰元'S 普物筆記*
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+          li.nav-item
+            a.nav-link(href='index.html')
+              | 首頁 
+            span.sr-only (current)
+          li.nav-item.dropdown
+            a#navbarDropdown.nav-link.dropdown-toggle.active(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+              | 基礎電子學
+            .dropdown-menu(aria-labelledby='navbarDropdown')
+              a.dropdown-item(href='c_inro.html') 電容原理與公式
+              a.dropdown-item.active(href='inductor.html') 電感原理與公式
+              a.dropdown-item(href='transistor.html') 電晶體原理
+              a.dropdown-item(href='4069.html') 反向器4069初探
+              .dropdown-divider
+              a.dropdown-item(href='ch1_new.html') 第一章心得整理與分享
+              a.dropdown-item(href='rc_arduino.html') 期末報告補充
+          li.nav-item.dropdown  
+            a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+              | 實驗教學
+            .dropdown-menu(aria-labelledby='navbarDropdown')
+              a.dropdown-item(href='viewwave.html') 示波器
+              .dropdown-divider
+              a.dropdown-item(href='trig.html') 電容的放電與充電波形圖
+    #container
+      #header
+      |   
+      #sidebar
+        #content
+          .title 電感的原理公式
+          |       
+          .learn
+            br
+            br
+            br
+            span.important 公式介紹（電感的歐姆定律）
+            | 		  
+            br
+            | 		  
+            blockquote
+              p
+                img(src="images/電感歐姆定律.png", class="img-fluid",alt="", width="500px")
+              | 			  
+              p 與 電容的歐姆定律做比較
+              | 			  
+              img(src="images/電容公式.png", class="img-fluid",alt="", width="500px")
+              | 			  
+              br
+              | 			  
+              img(src="images/比較電感.png",class="img-fluid", alt="", width="500px")
+            |        
+            br
+            br
+            br 		  
+            span.important 公式證明I
+            | 		  
+            br
+            | 		  
+            blockquote
+              img(src="images/inductor_002.png", class="img-fluid",alt="", width="500px")
+              | 			  
+              br
+              | 		    
+              img(src="images/formula_001-1.png",class="img-fluid", alt="", width="500px")
+              | 			  
+              br
+              | 		    
+              img(src="images/formula_002-1.png",class="img-fluid", alt="", width="500px")
+              | 			  
+              br
+              br
+              br 			  
+              li 電感的電抗
+              | 			  
+              br
+              | 			  
+              blockquote
+                img(src="images/formula_003-1.png", class="img-fluid",alt="", width="500px")
+              |
+              br
+              br 			  
+              li 電感的阻抗
+              | 			  
+              br
+              | 			  
+              blockquote
+                img(src="images/formula_004-1.png",class="img-fluid", alt="", width="500px")
+              | 			  
+              br
+              |
+              br
+              br 			  
+              li 電流比電壓晚到
+              | 			  
+              br
+              | 			  
+              blockquote
+                img(src="images/inductor_003.png", class="img-fluid",alt="", width="500px")
+              | 			  
+              br
+              |
+              br
+              br 			  
+              li 可以與電容做比較(補充網址)
+              | 			  
+              br
+              | 			  
+              blockquote
+                a(href="c_inro.html") 電容的原理公式
+                | 				  
+                br
+                | 			    
+                a(href="http://irobot.ntue.edu.tw/physics/Electrical/BasicElement/Capacitor/Capacitor.html") Capacitor_上課教材＿黃聰耀 老師
+            | 		  
+            br
+            |
+            br
+            br 	
+            span.important 公式證明II
+            | 		  
+            blockquote
+              img(src="images/電感證明1.png", class="img-fluid",alt="", width="500px")
+              | 			  
+              br
+              | 		    
+              img(src="images/電感證明2.png",class="img-fluid", alt="", width="500px")
+            |
+            br
+            br
+            br 	
+            span.important 公式證明III（電功率與能量）
+            | 		  
+            blockquote
+              img(src="images/電感電功率.png",class="img-fluid", alt="", width="500px")
+            |
+            br
+            br
+            br 	
+            span.important 心得
+            | 		
+            blockquote
+              br
+              p 其實只要複習過電容的話，電感的公式推導過程皆可以與電容比對，很快就會馬上上手
+              | 			
+              p 不需要背誦，就可以把公式推導出來。
+              | 			
+              p 藉由這次的推導，其實也是複習電容的原理公式呦！
+            |
+            br
+            br
+            br 	
+            span.important 上課教材
+            | 		
+            blockquote
+              p
+                a(href="http://irobot.ntue.edu.tw/physics/Electrical/BasicElement/Inductor/Inductor.html", target="_blank") 電感公式（Inductor）_黃聰耀 老師
+              | 			
+              p
+                a(href="https://www.youtube.com/watch?v=shJAV59NS6k", target="_blank") How Electromotive Force Works (Youtube)			
+                br
+                iframe(width="560", height="315", src="https://www.youtube-nocookie.com/embed/shJAV59NS6k?rel=0", frameborder="0", allow="autoplay; encrypted-media", allowfullscreen="")
+              p
+                a(href="https://www.youtube.com/watch?v=agujzHdvtjc", target="_blank") Transformers - Electric Power transmission (Youtube)
+                br
+                iframe(width="560", height="315", src="https://www.youtube-nocookie.com/embed/agujzHdvtjc?rel=0", frameborder="0", allow="autoplay; encrypted-media", allowfullscreen="")
+            .jumbotron
+                h1.display-4 謝謝您的支持！！
+                br
+                |           
+                p.lead 您的意見    是我改進的原動力
+                |           
+                p.lead 歡迎您將閱讀後的心得告訴我    讓我可以更加進步～～
+                |           
+                hr.my-4
+                |           
+                p
+                    img.img-fluid(src="images/emil_icon.png", width="30px", alt="")
+                    |    chen.oscar@hotmail.com
+                |           
+                p 資訊科學系   一年甲班   陳泰元
+      #footer 陳泰元・普通物理（下）成果網頁        
+      script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js', integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN', crossorigin='anonymous')
+      script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q', crossorigin='anonymous')
+      script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl', crossorigin='anonymous')

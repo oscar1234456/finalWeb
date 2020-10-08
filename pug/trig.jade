@@ -1,0 +1,261 @@
+doctype html
+html(lang='en')
+  head
+    meta(content="text/html; charset=UTF-8", http-equiv="Content-Type")
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    | 	  
+    link(rel="stylesheet", href="css/trig.css")
+    link(rel="stylesheet", href="css/movepic.css")
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
+    link(href='open-iconic-master/font/css/open-iconic-bootstrap.css', rel='stylesheet')
+    |   
+    title 陳泰元・電容的放電與充電波形圖
+  body
+    .takeup
+        a(href="#")
+            span.oi.oi-arrow-thick-top 
+    nav.navbar.fixed-top.navbar-expand-lg.navbar-dark(style='background-color:#355772;')
+      a.navbar-brand(href='index.html') 
+        img.d-inline-block.align-top(src='images/phy_icon.png', width='30', height='30', alt='')
+        |    &nbsp;&nbsp;   *泰元'S 普物筆記*
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+          li.nav-item
+            a.nav-link(href='index.html')
+              | 首頁 
+            span.sr-only (current)
+          li.nav-item.dropdown
+            a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+              | 基礎電子學
+            .dropdown-menu(aria-labelledby='navbarDropdown')
+              a.dropdown-item(href='c_inro.html') 電容原理與公式
+              a.dropdown-item(href='inductor.html') 電感原理與公式
+              a.dropdown-item(href='transistor.html') 電晶體原理
+              a.dropdown-item(href='4069.html') 反向器4069初探
+              .dropdown-divider
+              a.dropdown-item(href='ch1_new.html') 第一章心得整理與分享
+              a.dropdown-item(href='rc_arduino.html') 期末報告補充
+          li.nav-item.dropdown  
+            a#navbarDropdown.nav-link.dropdown-toggle.active(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+              | 實驗教學
+            .dropdown-menu(aria-labelledby='navbarDropdown')
+              a.dropdown-item(href='viewwave.html') 示波器
+              .dropdown-divider
+              a.dropdown-item.active(href='trig.html') 電容的放電與充電波形圖
+    #container
+      #header
+      |   
+      #sidebar
+        #content
+          .title 電容的放電與充電波形圖
+          |       
+          .learn
+            br
+            br
+            span.important 實驗目的
+            |         
+            blockquote
+              p
+                ol
+                  li 藉由示波器觀看電容波形
+            |
+            br
+            br 		   
+            span.important 實驗步驟
+            |
+            br
+            br         
+            blockquote
+              p
+                span(style="text-decoration:underline") 充電時（上升緣觸發）
+                | 				
+                blockquote
+                  ol
+                    li 先接好如圖的電路，並依照圖示接上示波器
+                    | 					
+                    br
+                    | 					  
+                    img(src="images/DSC_0402.JPG", class="img-fluid", alt="", width="500")
+                    | 			  		
+                    br
+                    |
+                    br
+                    br 			  		
+                    li 打開示波器，並且先恢復原廠設定
+                    | 			  		
+                    br
+                    | 			  		
+                    li 將水平刻度調至5.00s，垂直刻度調至2.00V
+                    | 			  		
+                    br
+                    | 			  		
+                    li 按下「Acquire」(擷取) 按鈕，並且查看「擷取功能表」
+                    | 			  		
+                    br
+                    | 			  		
+                    li 按「峰值檢測」選項按鈕(螢幕右方第二顆按鍵)
+                    | 			  		
+                    br
+                    | 			  		
+                    li 按下「觸發功能表」按鈕
+                    | 					
+                    br
+                    | 					
+                    li 按下「斜率」 ► 「上升」(代表以 上升緣觸發)
+                    | 					
+                    br
+                    | 					
+                    li 旋轉「位準」旋鈕，將觸發位準調整為大約1V
+                    | 					
+                    br
+                    | 					
+                    li 此時，請確認電容陽極是接地，以利電容放電
+                    | 					
+                    br
+                    | 					
+                    li 按下「Single」(單一) 按鈕  會螢幕表頭先出現 Armed字樣
+                    | 					
+                    br
+                    | 					
+                    li
+                      | 等到出現Ready字樣 即可以將電容陽極接5V 此時螢幕表頭會出現 Trig字樣
+                      br
+                      | 						表示正在擷取中 要稍待片刻
+                    | 					
+                    br
+                    | 					
+                    li 最後，螢幕上即呈現我們要的圖
+                    | 					
+                    br
+                    | 					  
+                    img(src="images/DSC_0403.JPG", class="img-fluid",alt="", width="500")
+              | 		
+              br
+              |
+              br
+              br
+              br 		
+              p
+                span(style="text-decoration:underline") 放電時（下降緣觸發）
+                | 				
+                blockquote
+                  ol
+                    li 先接好如圖的電路，並依照圖示接上示波器
+                    | 					
+                    br
+                    | 					  
+                    img(src="images/DSC_0402.JPG", class="img-fluid",alt="", width="500")
+                    | 			  		
+                    br
+                    |
+                    br
+                    br 			  		
+                    li 打開示波器，並且先恢復原廠設定
+                    | 			  		
+                    br
+                    | 			  		
+                    li 將水平刻度調至5.00s，垂直刻度調至2.00V
+                    | 			  		
+                    br
+                    | 			  		
+                    li 按下「Acquire」(擷取) 按鈕，並且查看「擷取功能表」
+                    | 			  		
+                    br
+                    | 			  		
+                    li 按「峰值檢測」選項按鈕(螢幕右方第二顆按鍵)
+                    | 			  		
+                    br
+                    | 			  		
+                    li 按下「觸發功能表」按鈕
+                    | 					
+                    br
+                    | 					
+                    li 按下「斜率」 ► 「下降」(代表以 下降緣觸發)
+                    | 					
+                    br
+                    | 					
+                    li 旋轉「位準」旋鈕，將觸發位準調整為大約4V
+                    | 					
+                    br
+                    | 					
+                    li 此時，請確認電容陽極是接5V，以利電容充電
+                    | 					
+                    br
+                    | 					
+                    li 按下「Single」(單一) 按鈕  會螢幕表頭先出現 Armed字樣
+                    | 					
+                    br
+                    | 					
+                    li
+                      | 等到出現Ready字樣 即可以將電容陽極接地 此時螢幕表頭會出現 Trig字樣
+                      br
+                      | 						表示正在擷取中 要稍待片刻
+                    | 					
+                    br
+                    | 					
+                    li 最後，螢幕上即呈現我們要的圖
+                    | 					
+                    br
+                    | 				    
+                    img(src="images/DSC_0404.JPG",class="img-fluid", alt="", width="500")
+            |    
+            |
+            br
+            br
+            br 	
+            span.important 實驗心得
+            | 		
+            blockquote
+              br
+              | 經由這個實驗，我們可以了解電容充放電的特性，以及學習如何操作示波器，擷取單一訊號
+              br
+              | 			從實驗結果也可以應證：
+              | 			
+              br
+              | 			
+              blockquote
+                br
+                br
+                | 電容能量的儲存
+            |
+            br
+            br
+            br 	
+            span.important 實驗總結
+            | 		
+            blockquote
+              br
+              | 電容的特性
+              ol
+                br
+                li 電容何時會充電？
+                | 				
+                br
+                | 				電容是由兩塊金屬板構成，當接上電源時，會累積電荷在上頭，然而兩塊金屬板中間仍然有中間絕緣體存在
+                | 				
+                br
+                | 				因此整個電容仍然為電中性
+                | 				
+                br
+                | 				當兩塊金屬板所造成的電位差等於使用者給予它的電壓時，則電容會停止充電
+                | 				
+                br
+                | 			  	
+                br
+                | 				
+                li 放電呢？
+                | 				
+                br
+                | 				把電容接上二極體時，就會發現燈泡瞬間發亮又熄滅，這就是它的放電效果！
+                | 				
+                br
+                | 			  由此次實驗，更可以明白整個充放電的時間以及平均電壓
+      |   
+      |   
+      |   
+      #footer 陳泰元・普通物理（下）成果網頁        
+      script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js', integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN', crossorigin='anonymous')
+      script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q', crossorigin='anonymous')
+      script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl', crossorigin='anonymous')

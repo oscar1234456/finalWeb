@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">	  
+    <link rel="stylesheet" href="css/rc_arduino.css">
+    <link rel="stylesheet" href="css/movepic.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="open-iconic-master/font/css/open-iconic-bootstrap.css" rel="stylesheet">  
+    <title>陳泰元・期末報告補充</title>
+  </head>
+  <body>
+    <div class="takeup"><a href="#"><span class="oi oi-arrow-thick-top"> </span></a></div>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color:#355772;"><a class="navbar-brand" href="index.html"> <img class="d-inline-block align-top" src="images/phy_icon.png" width="30" height="30" alt="">   &nbsp;&nbsp;   *泰元'S 普物筆記*</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">首頁 </a><span class="sr-only">(current)</span></li>
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle active" id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">基礎電子學</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="c_inro.html">電容原理與公式</a><a class="dropdown-item" href="inductor.html">電感原理與公式</a><a class="dropdown-item" href="transistor.html">電晶體原理</a><a class="dropdown-item" href="4069.html">反向器4069初探</a>
+              <div class="dropdown-divider"></div><a class="dropdown-item" href="ch1_new.html">第一章心得整理與分享</a><a class="dropdown-item active" href="rc_arduino.html">期末報告補充</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">實驗教學</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="viewwave.html">示波器</a>
+              <div class="dropdown-divider"></div><a class="dropdown-item" href="trig.html">電容的放電與充電波形圖</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div id="container">
+      <div id="header"></div>  
+      <div id="sidebar">
+        <div id="content">
+          <div class="title">期末報告補充</div>    
+          <div class="learn"><br><br><span class="important">Circuit Lab介紹</span>		  <br><br>
+            <blockquote>
+              <p>一個可以<strong>畫線路</strong>的網站</p>		    
+              <div class="tip">Circuit Lab（電路實驗室）<br><br>
+                <blockquote>連結網址：<a href="https://www.circuitlab.com" target="_blank">https://www.circuitlab.com</a></blockquote>
+              </div><br><br>
+              <p><img class="img-fluid" src="images/circuit1.png" width="500px" alt=""></p>		    
+              <p> </p>		    
+              <p> </p>		    
+              <p>它可以幫助我們<strong>輕鬆地畫出</strong>所需的電路圖</p>		    
+              <p><img class="img-fluid" src="images/circuit2.png" width="500px" alt=""></p>		    
+              <p> </p>		    
+              <p>還可以輸出成PDF 輕鬆把自己的<strong>想法分享</strong>給其他人</p>		    
+              <p><img class="img-fluid" src="images/circuit_pdf.png" width="500px" alt=""></p>		    
+              <p>對之後的應用電子學課程有很大的幫助！</p><br><br>		    
+              <p><span class="important">ThinkerCAD介紹</span></p>		    
+              <p>它是 AutoCAD 公司出品的線上<strong>3D電路模擬網站</strong></p>		    
+              <div class="tip">ThinkerCAD<br><br>
+                <blockquote>連結網址：<a href="https://www.tinkercad.com/circuits" target="_blank">https://www.tinkercad.com/circuits</a></blockquote>
+              </div><br><br>
+              <p>如果想要模擬電路，而且想要有<strong>「真正接電路的感覺」</strong></p>			  
+              <p>這個網站絕對是第一首選！！</p>			  
+              <p><img class="img-fluid" src="images/thinkercad.png" width="500px" alt=""></p>			  
+              <p> </p><br><br><br>
+              <p><span class="important">自己試做的電容電路-延遲切換(配合Arduino)</span></p>			  
+              <p><img class="img-fluid" src="images/low_greenshow.JPG" width="400px" alt=""><img class="img-fluid" src="images/high_redshow.JPG" width="400px" alt=""></p>			  
+              <p>當手<strong>沒有遮住</strong>光敏電阻（光電池）時-><strong>綠色燈亮</strong></p>			  
+              <p>當手<strong>遮住</strong>光敏電阻（光電池）時->綠色燈將<strong>繼續亮</strong>一段時間->再切換成<strong>紅色燈亮</strong></p>			  <br>			  
+              <div class="tip">光敏電阻(光電池)(PhotoCell)<br>				  
+                <blockquote>
+                  <p>是一種<strong>可變電阻</strong>，會依照接觸到它的表面光線的量來改變它的電阻值 <br></p>					  
+                  <p>有光線時->電阻值下降<br>					    沒有光線時->電阻值上升</p>					  
+                  <p><img class="img-fluid" src="images/光敏電阻.jpg" width="300px" alt=""></p>
+                </blockquote>
+              </div><br><br>
+              <p>模擬電路圖：</p>			  
+              <p><img class="img-fluid" src="images/Fantabulous Juttuli.png" width="800px" alt=""></p>			  
+              <p> </p>			  
+              <p>程式碼：</p>			  
+              <p><img class="img-fluid" src="images/code.png" width="500px" alt=""></p>			  
+              <p>一般時候（不用手遮光敏電阻時） 電阻值下降</p>			  
+              <p>電流幾乎跑光敏電阻這向</p>			  
+              <p><strong>電容並無接受到太大電流對它充電</strong></p>			  
+              <p>這時Arduino知道該處為低電位 因此讓綠燈亮起</p>			  
+              <p><img class="img-fluid" src="images/big-1.png" width="600px" alt=""></p>			  
+              <p> </p>			  
+              <p>當手遮光敏電阻時 電阻值上升</p>			  
+              <p>電流幾乎改跑電容方向<strong> 此時電容開始充電（往高電位跑）</strong></p>		    
+              <p>這時Arduino知道該處為高電位 因此讓紅燈亮起</p>		    
+              <p><img class="img-fluid" src="images/big-2.png" width="600px" alt=""></p>		    
+              <p> </p>		    
+              <p>當手指再次遮住光敏電阻時 則又等於電容該處開關被關起來</p>		    
+              <p><strong>似同斷路 因此電位又降為低電位</strong></p>		    
+              <p> </p>		    
+              <p>實驗影片：</p>		    
+              <p><em>未加電容</em></p>            
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/KGEyHfNuxC0?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>		    
+              <p> </p>		    
+              <p><em>加上電阻</em></p>            
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/L9nKBlwaRr8?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>		    
+              <p></p>
+              <div class="jumbotron">
+                <h1 class="display-4">謝謝您的支持！！</h1><br>          
+                <p class="lead">您的意見    是我改進的原動力</p>          
+                <p class="lead">歡迎您將閱讀後的心得告訴我    讓我可以更加進步～～</p>          
+                <hr class="my-4">          
+                <p><img class="img-fluid" src="images/emil_icon.png" width="30px" alt="">   chen.oscar@hotmail.com</p>          
+                <p>資訊科學系   一年甲班   陳泰元</p>
+              </div>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+      <div id="footer">陳泰元・普通物理（下）成果網頁</div>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">             </script>
+    </div>
+  </body>
+</html>

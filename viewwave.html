@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">	  
+    <link rel="stylesheet" href="css/viewwave.css">
+    <link rel="stylesheet" href="css/movepic.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="open-iconic-master/font/css/open-iconic-bootstrap.css" rel="stylesheet">  
+    <title>陳泰元・示波器</title>
+  </head>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">  
+    <title>陳泰元・示波器</title>
+  </head>  
+  <body>
+    <div class="takeup"><a href="#"><span class="oi oi-arrow-thick-top"> </span></a></div>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color:#355772;"><a class="navbar-brand" href="index.html"> <img class="d-inline-block align-top" src="images/phy_icon.png" width="30" height="30" alt="">   &nbsp;&nbsp;   *泰元'S 普物筆記*</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">首頁 </a><span class="sr-only">(current)</span></li>
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">基礎電子學</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="c_inro.html">電容原理與公式</a><a class="dropdown-item" href="inductor.html">電感原理與公式</a><a class="dropdown-item" href="transistor.html">電晶體原理</a><a class="dropdown-item" href="4069.html">反向器4069初探</a>
+              <div class="dropdown-divider"></div><a class="dropdown-item" href="ch1_new.html">第一章心得整理與分享</a><a class="dropdown-item" href="rc_arduino.html">期末報告補充</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle active" id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">實驗教學</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item active" href="viewwave.html">示波器</a>
+              <div class="dropdown-divider"></div><a class="dropdown-item" href="trig.html">電容的放電與充電波形圖</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div id="container">
+      <div id="header"></div>  
+      <div id="sidebar">
+        <div id="content">
+          <div class="title">示波器</div>      
+          <div class="learn"><br><br><span class="important">示波器用法簡介</span>        
+            <blockquote>
+              <p>
+                <ol>
+                  <li>探棒的使用</li>					
+                  <blockquote>*小心，探棒很貴！<br>						<img class="img-fluid" src="images/viewwavw.jpg" alt="" width="250">						<br>						
+                    <p>有一端粗頭部分要連接在儀器上<br>						另一端有兩個分岔的頭 分別是鱷魚夾以及鉤子
+                      						<br><strong>						可以用來接電以及接地</strong>
+                    </p>
+                  </blockquote><br><br>
+                  <li>儀器及探棒的校正</li>              		
+                  <blockquote>首先<br>						要先確認探棒有用矯正起子來做正確調整
+                    						<br>						<img class="img-fluid" src="images/DSC_0379.JPG" alt="" width="500">              			<br>              			要將示波器電線接好
+                                  			<br>              			並且將總電源打開
+                                  			<br>              			之後按下儀器右上方「原廠設定Default Setup」
+                                  			如此，將可把儀器設定為出廠設定
+                  </blockquote><br><br><br>
+                  <li>學會看示波器</li>              		
+                  <blockquote>
+                    <p>首先，先按下儀器右上方「AutoSet」按鍵 <br>						<img class="img-fluid" src="images/DSC_0366.JPG" width="500" height="281" alt=""> <br>						可以發現
+                                    			<br>              			畫面左下方CH1的部分有寫數字
+                      						<br>						它代表的是 垂直方向的刻度（此圖代表垂直方向為一格2.00V）
+                      						<br>						再來
+                      						<br>						螢幕中間M 則代表水平方向的刻度（此圖代表水平方向一格500µs）
+                      						<br>						綜合以上
+                      						<br>						我們可以知道這個方波 最高峰值大約為5V 週期為1ms
+                      						<br>						此外
+                      						<br>						還可以選擇不同型態的波來表示
+                      						<br>						<img class="img-fluid" src="images/DSC_0373.JPG" alt="" width="500">						<br>						<img class="img-fluid" src="images/DSC_0374.JPG" alt="" width="500">
+                    </p>              			
+                    <p><img class="img-fluid" src="images/DSC_0375.JPG" width="500" height="281" alt=""></p>
+                  </blockquote><br><br>
+                  <li>調整垂直、水平位置</li>              		
+                  <blockquote>條動轉輪 可以調整水平或垂直位置<br>						讓使用者可以選擇不同基準點來觀察此波</blockquote><br><br>
+                  <li>調整觸發點</li>              		
+                  <blockquote>上緣與下緣<br>將觸發點設置不同的話 會以不同方式觸發波緣<br>也就是更換觸發波形的標準</blockquote><br><br>
+                  <li>調整垂直、水平刻度</li>              		
+                  <blockquote>圖形會因此變異<br>就如平面座標一樣<br>刻度、尺度不同就會不同就會讓圖形不同</blockquote><br><br>
+                  <li>測量圖示功能</li>              		
+                  <blockquote>方便使用者由列表得知該波形的資訊</blockquote><br><br>
+                  <li>標線測量功能</li>              		
+                  <blockquote>有兩條輔助線，能測量之間的變化量</blockquote>
+                </ol>
+              </p>
+            </blockquote>       
+            <br><br><br><span class="important">任意訊號產生器用法簡介</span>          
+            <blockquote>
+              <p><img class="img-fluid" src="images/func.jpg" width="500px" alt="">
+                <ol><br>
+                  <li>接線與準備</li>					
+                  <blockquote></blockquote><br>
+                  <li>FUNC(Function)按鍵</li>              		
+                  <blockquote>可以調整波形：「弦波、方波、角波、雜訊、任意波」</blockquote> <br>
+                  <li>參數屬性調整按鍵</li>              		
+                  <blockquote>有四項參數：
+                    <blockquote>
+                      <ol>
+                        <li>FREQ(頻率)
+                          <blockquote>可以調整波形頻率</blockquote>
+                        </li>              					
+                        <li>AMPL(震幅)
+                          <blockquote>可以調整波形震幅（以Vpp為單位）</blockquote>
+                        </li>              					
+                        <li>OFST(位移)
+                          <blockquote>可以調整波形位移</blockquote>
+                        </li>              					
+                        <li>DUTY(分配)
+                          <blockquote>可以調整波峰與波谷之間的比例（在不變週期之下）</blockquote>
+                        </li>
+                      </ol>
+                    </blockquote>
+                  </blockquote><br><br>
+                  <li>數字位數選擇按鍵</li>              		
+                  <blockquote>條動轉輪<br>可以選擇欲調整的位數</blockquote><br><br>
+                  <li>PWM(Pulse Width Modulation)</li>              		
+                  <blockquote> 利用數位的方式達到類比的功能</blockquote><br>
+                  <div class="jumbotron">
+                    <h1 class="display-4">謝謝您的支持！！</h1><br>          
+                    <p class="lead">您的意見    是我改進的原動力</p>          
+                    <p class="lead">歡迎您將閱讀後的心得告訴我    讓我可以更加進步～～</p>          
+                    <hr class="my-4">          
+                    <p><img class="img-fluid" src="images/emil_icon.png" width="30px" alt="">   chen.oscar@hotmail.com</p>          
+                    <p>資訊科學系   一年甲班   陳泰元</p>
+                  </div>
+                </ol>
+              </p>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+      <div id="footer">陳泰元・普通物理（下）成果網頁</div>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">                     </script>
+    </div>
+  </body>
+</html>

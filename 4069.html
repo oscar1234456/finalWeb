@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">	  
+    <link rel="stylesheet" href="css/4069.css">
+    <link rel="stylesheet" href="css/movepic.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="open-iconic-master/font/css/open-iconic-bootstrap.css" rel="stylesheet">  
+    <title>陳泰元・反相器4069初探</title>
+  </head>
+  <body>
+    <div class="takeup"><a href="#"><span class="oi oi-arrow-thick-top"> </span></a></div>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color:#355772;"><a class="navbar-brand" href="index.html"> <img class="d-inline-block align-top" src="images/phy_icon.png" width="30" height="30" alt="">   &nbsp;&nbsp;   *泰元'S 普物筆記*</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">首頁 </a><span class="sr-only">(current)</span></li>
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle active" id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">基礎電子學</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="c_inro.html">電容原理與公式</a><a class="dropdown-item" href="inductor.html">電感原理與公式</a><a class="dropdown-item" href="transistor.html">電晶體原理</a><a class="dropdown-item active" href="4069.html">反向器4069初探</a>
+              <div class="dropdown-divider"></div><a class="dropdown-item" href="ch1_new.html">第一章心得整理與分享</a><a class="dropdown-item" href="rc_arduino.html">期末報告補充</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">實驗教學</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="viewwave.html">示波器</a>
+              <div class="dropdown-divider"></div><a class="dropdown-item" href="trig.html">電容的放電與充電波形圖</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div id="container">
+      <div id="header"></div>  
+      <div id="sidebar">
+        <div id="content">
+          <div class="title">反相器4069初探</div>      
+          <div class="learn"><br><br><span class="important">反向器技術資料</span><br>	    
+            <blockquote><img class="img-fluid" src="images/tech1.png" alt="" width="500px">			  <br>		  <img class="img-fluid" src="images/tech2.png" alt="" width="500px">			  <br></blockquote><br><br><span class="important">反向器功用</span><br><br>	  
+            <blockquote>顧名思義，它可以將輸入資料做反相動作（0->1 / 1->0）</blockquote><br><br><span class="important">反向器實驗</span><br><br>	    
+            <blockquote>
+              <li>
+                <u>輸入電壓與輸出電壓關係</u>
+              </li>			  
+              <blockquote>
+                <p><br>				  首先，我們必須將電路先接好</p>				  
+                <p><img class="img-fluid" src="images/反相器1.JPG" alt="" width="500px"></p>				  
+                <p>接著，就可以開啟電源來測試，以下是測試後資料</p>				  
+                <p><img class="img-fluid" src="images/ic電壓輸入與輸出.png" alt="" width="1000px"></p>				  
+                <p>由實驗後的資料可以得知</p>				  
+                <p>我們輸入大概3V以上的時候</p>				  
+                <p>就會輸出0V</p>				  
+                <p>這也應證</p>				  
+                <p>電壓的範圍 通常分成3等分</p>				  
+                <p>所謂 高 （H）: 於<strong>2/3</strong>以上</p>				  
+                <p>所謂 低 （L）  : 於<strong>1/3</strong>以下</p>				  
+                <p>所以在設計電路時 要小心<strong>不要有模棱兩可</strong>的地方出現！</p>				  
+                <p>另外</p>			    
+                <p><strong>這也是一種「類比轉數位」的概念（通通變成0或1表示）</strong></p>
+              </blockquote>			  <br><br><br>
+              <li>
+                <u>輸入電壓與輸出電流關係</u>
+              </li>			  <br>	      
+              <blockquote>
+                <p>這邊，我們直接把輸入改成簡單的5V（高電位）以及0V（低電位）</p>			    
+                <p>並且測量輸出後的電流</p>		    
+                <p>以下是測試後資料</p>			    
+                <p><img class="img-fluid" src="images/電流輸出.png" alt="" width="500px"></p>		　　　　　<br>
+              </blockquote>			  
+              <li>
+                <u>接上燈泡</u>
+              </li><br>
+              <blockquote>
+                <p>如果我們將輸出端改成接上燈泡</p>					
+                <p>則我們會看到<strong>反相的結果</strong></p>					
+                <p><img class="img-fluid" src="images/接燈泡結果.png" alt="" width="500px"></p>					
+                <p><img class="img-fluid" src="images/反相器2.JPG" alt="" width="500px"></p>
+              </blockquote><br><br>
+              <li>
+                <u>接上繼電器</u>
+              </li><br>
+              <blockquote>
+                <p>如果接上繼電器當作線圈的控制區，我們會發現它<strong>一點也沒有作用</strong></p>				    
+                <p>我們先介紹繼電器的特性</p>				    
+                <p><img class="img-fluid" src="images/繼電器.png" alt="" width="1000px"></p>				    
+                <p>我們可以從此知道</p>				    
+                <p>繼電器的工作電壓要做切換<strong>大概要40mA</strong></p>				    
+                <p>但是4069這顆IC輸出<strong>卻只有5.3mA</strong></p>				    
+                <p>因此</p>				    
+                <p>我們必須要有「<strong>放大器」->電晶體</strong>來協助我們放大所需電流</p>				    
+                <p><img class="img-fluid" src="images/反相器3.JPG" alt="" width="500px"></p>
+              </blockquote><br><br>
+              <li>
+                <u>輸出接上負載後的結果</u>
+              </li><br>
+              <blockquote>
+                <p>如果IC輸出端接上負載後</p>				    
+                <p>則該輸出電壓則會<strong>不正確</strong></p>				    
+                <p>因為 <strong>負載效應</strong></p>				    
+                <div class="tip">
+                  <p>負載效應 </p>						
+                  <blockquote>
+                    <p>由於負載的變化而引起輸出穩定量的變化的效應稱為 
+                      <u>負載效應</u>
+                    </p>
+                  </blockquote>
+                </div><br>
+                <p>因為接上負載後</p>					  
+                <p>IC輸出就會有較大的電流產生</p>					  
+                <p>其內電阻將會作用 而會有壓降發生</p>				    
+                <p>故 工作電壓就會跟預設的不同！</p>
+              </blockquote>
+            </blockquote><br><br><br><span class="important">心得</span><br><br>
+            <blockquote>
+              <p>這次做了很多實驗，雖然我們在數位邏輯課程有學習到反相器的知識</p>					
+              <p>但是上完了課才知道原來電壓與電流會隨著狀況而有不同工作指摽</p>					
+              <p>然後也學習了加上繼電器的應用</p>					
+              <p>我想我們真的需要好好學習</p>					
+              <p>大二的應用電子學才有實力面對難題！</p>
+            </blockquote><br><br><br><span class="important">上課教材</span>		
+            <blockquote>
+              <p><a href="http://irobot.ntue.edu.tw/physics/Electrical/MOSFET/Inverter.html" target="_blank">反相器（Inverter）_黃聰耀 老師</a></p>	    
+              <p><a href="http://irobot.ntue.edu.tw/physics/Electrical/MOSFET/docs/4069inverter.pdf" target="_blank">4069技術資料</a></p>
+            </blockquote>
+            <div class="jumbotron">
+              <h1 class="display-4">謝謝您的支持！！</h1><br>          
+              <p class="lead">您的意見    是我改進的原動力</p>          
+              <p class="lead">歡迎您將閱讀後的心得告訴我    讓我可以更加進步～～</p>          
+              <hr class="my-4">          
+              <p><img class="img-fluid" src="images/emil_icon.png" width="30px" alt="">   chen.oscar@hotmail.com</p>          
+              <p>資訊科學系   一年甲班   陳泰元  </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer">陳泰元・普通物理（下）成果網頁</div>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </div>
+  </body>
+</html>

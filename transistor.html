@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">	  
+    <link rel="stylesheet" href="css/transistor.css">
+    <link rel="stylesheet" href="css/movepic.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="open-iconic-master/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+    <title>陳泰元·電晶體原理   </title>
+  </head>
+  <body>
+    <div class="takeup"><a href="#"><span class="oi oi-arrow-thick-top"> </span></a></div>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color:#355772;"><a class="navbar-brand" href="index.html"> <img class="d-inline-block align-top" src="images/phy_icon.png" width="30" height="30" alt="">   &nbsp;&nbsp;   *泰元'S 普物筆記*</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">首頁 </a><span class="sr-only">(current)</span></li>
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle active" id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">基礎電子學</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="c_inro.html">電容原理與公式</a><a class="dropdown-item" href="inductor.html">電感原理與公式</a><a class="dropdown-item active" href="transistor.html">電晶體原理</a><a class="dropdown-item" href="4069.html">反向器4069初探</a>
+              <div class="dropdown-divider"></div><a class="dropdown-item" href="ch1_new.html">第一章心得整理與分享</a><a class="dropdown-item" href="rc_arduino.html">期末報告補充</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">實驗教學</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="viewwave.html">示波器</a>
+              <div class="dropdown-divider"></div><a class="dropdown-item" href="trig.html">電容的放電與充電波形圖</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div id="container">
+      <div id="header"></div>  
+      <div id="sidebar">
+        <div id="content">
+          <div class="title">電晶體的原理 </div>
+          <div class="learn"><br><br><span class="important">用途</span>		  <br>		  
+            <blockquote><br>
+              <li>開關</li>			<img class="img-fluid" src="images/電晶體作用.png" alt="" width="500px">			<br>			<br><br><br>
+              <li>放大器</li>			<img class="img-fluid" src="images/電晶體作用擴大.png" alt="" width="500px">			 <br>			  <br><br><br>
+              <li>邏輯閘</li>		    <img class="img-fluid" src="images/電晶體當邏輯閘.png" alt="" width="500px">
+            </blockquote>		  <br><br><br><br><span class="important">原理</span>		  <br>			  
+            <blockquote><br><br>
+              <li>半導體原理</li>				  
+              <blockquote>P型半導體->產生電洞（移動慢）<br>					  N型半導體->產生自由電子（移動快）
+                					  <br><br>
+                <div class="tip"> 注意不管Ｐ型還是Ｎ型半導體皆是不帶電！</div>					  <br>				    <img class="img-fluid" src="images/p型半導體.png" alt="" width="500px">					  <br>				    <img class="img-fluid" src="images/n型半導體.png" alt="" width="500px">					  <br>					  <br>					  如果Ｐ型和Ｎ型接在一起->將會造成填補電洞的現象發生->空泛層(Diode)
+                					  <br>				    <img class="img-fluid" src="images/空泛層介面.png" alt="" width="500px">
+              </blockquote>				  <br><br><br>
+              <li>互接相反方向半導體->電晶體</li>			    
+              <blockquote><img class="img-fluid" src="images/電晶體pnp.png" alt="" width="500px">					  <br>					  <br>					  其實就很像（ＮＰ）（ＰＮ）的接法
+                					  <br>				  <img class="img-fluid" src="images/接上電晶體.png" alt="" width="500px">					  <br>					  <br>					  如果在左上角接上另一顆電池形成迴路(則左半邊電子會不斷填補電洞)
+                					  <br>					  <img class="img-fluid" src="images/電晶體左上構造.png" alt="" width="500px"><br>					  將會造成
+                					  <br>				  <img class="img-fluid" src="images/電晶體電流.png" alt="" width="500px">					  <br>					  <br>					  電流方向示意
+                					  <br>				  <img class="img-fluid" src="images/電晶體電流方向.png" alt="" width="500px">					  <br>					  <br>					  如果接上負載電路
+                					  <br>				  <img class="img-fluid" src="images/電晶體電流2.png" alt="" width="500px">					  <br>					  因此可以藉此來產生電流
+                					<br>				    <br>					<img class="img-fluid" src="images/npn電感示意圖.png" alt="" width="500px">
+              </blockquote>
+            </blockquote><br><br><br><span class="important">心得</span>				
+            <blockquote><br>
+              <p>第一次見到的電子元件，未來我想用到他的機率一定很高！</p>
+              <p>雖然目前還未學到它的應用，但是在之後一定能有機會體會它的強大！</p>
+            </blockquote><br><br><br><span class="important">上課教材</span>		
+            <blockquote>
+              <p><a href="http://irobot.ntue.edu.tw/physics/Electrical/BJT/BJT.htm" target="_blank">電晶體（Transistor）_黃聰耀 老師</a></p>		  
+              <p><a href="https://www.youtube.com/watch?v=7ukDKVHnac4" target="_blank">Transistors,How do they work? (Youtube)</a><br>
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/7ukDKVHnac4?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+              </p>		  
+              <p><a href="https://www.youtube.com/watch?v=Bine_PbyFSQ" target="_blank">Transistors - Field Effect and Bipolar Transistors: MOSFETS and BJTs (Youtube)</a><br><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Bine_PbyFSQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+            </blockquote>
+            <div class="jumbotron">
+              <h1 class="display-4">謝謝您的支持！！</h1><br>          
+              <p class="lead">您的意見    是我改進的原動力</p>          
+              <p class="lead">歡迎您將閱讀後的心得告訴我    讓我可以更加進步～～</p>          
+              <hr class="my-4">          
+              <p><img class="img-fluid" src="images/emil_icon.png" width="30px" alt="">   chen.oscar@hotmail.com</p>          
+              <p>資訊科學系   一年甲班   陳泰元</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer">陳泰元・普通物理（下）成果網頁</div>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </div>
+  </body>
+</html>

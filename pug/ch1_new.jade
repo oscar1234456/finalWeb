@@ -1,0 +1,211 @@
+doctype html
+html(lang='en')
+  head
+    meta(content="text/html; charset=UTF-8", http-equiv="Content-Type")
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    | 	  
+    link(rel="stylesheet", href="css/ch1_new.css")
+    link(rel="stylesheet", href="css/movepic.css")
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
+    link(href='open-iconic-master/font/css/open-iconic-bootstrap.css', rel='stylesheet')
+    |   
+    title 陳泰元・第一章心得整理與分享
+  |   
+  
+  body
+    .takeup
+      a(href="#")
+        span.oi.oi-arrow-thick-top 
+    nav.navbar.fixed-top.navbar-expand-lg.navbar-dark(style='background-color:#355772;')
+      a.navbar-brand(href='index.html') 
+        img.d-inline-block.align-top(src='images/phy_icon.png', width='30', height='30', alt='')
+        |    &nbsp;&nbsp;   *泰元'S 普物筆記*
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+          li.nav-item
+            a.nav-link(href='index.html')
+              | 首頁 
+            span.sr-only (current)
+          li.nav-item.dropdown
+            a#navbarDropdown.nav-link.dropdown-toggle.active(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+              | 基礎電子學
+            .dropdown-menu(aria-labelledby='navbarDropdown')
+              a.dropdown-item(href='c_inro.html') 電容原理與公式
+              a.dropdown-item(href='inductor.html') 電感原理與公式
+              a.dropdown-item(href='transistor.html') 電晶體原理
+              a.dropdown-item(href='4069.html') 反向器4069初探
+              .dropdown-divider
+              a.dropdown-item.active(href='ch1_new.html') 第一章心得整理與分享
+              a.dropdown-item(href='rc_arduino.html') 期末報告補充
+            
+          li.nav-item.dropdown  
+            a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+              | 實驗教學
+            .dropdown-menu(aria-labelledby='navbarDropdown')
+              a.dropdown-item(href='viewwave.html') 示波器
+              .dropdown-divider
+              a.dropdown-item(href='trig.html') 電容的放電與充電波形圖
+    #container
+      #header
+      #content
+        .title 第一章 心得整理與分享
+        .learn
+          .learn_1
+            p(style="text-align: left; font-family: 'Microsoft JhengHei', PMingLiU, Arial, BiauKai;") 有學過的：
+            ol
+              li 向量
+              li 歐姆定律v=IR
+          .learn_2
+            p(style="text-align: left; font-family: 'Microsoft JhengHei', PMingLiU, Arial, BiauKai;") 沒學過的：
+            ol
+              li 基底
+              li 電感
+              li 阻抗
+              li 濾波器
+              li 電容
+              li 二極體
+              li 傅立葉轉換
+              li 電晶體
+        p  
+        .main
+          p 功用：
+          ol
+            li
+              span.item 電阻(R)
+              ul
+                li 控制電壓或電流
+                br
+                img(src='images/color-code.jpg',class="img-fluid", alt='', width='500px')
+            br
+            br
+            li
+              span.item 電感(L)
+              ul
+                li 對「頻率」有感覺的元件
+                li 對不同「頻率」擁有選擇性
+                li 可以做出「濾波器」
+                li 隨頻率增加而變大
+            br
+            br
+            li
+              span.item 電容(C)
+              ul
+                li 對「頻率」有感覺的元件
+                li 對不同「頻率」擁有選擇性
+                li 可以做出「濾波器」
+                li 隨頻率增加而變小
+                br
+            .tip
+              p * LC帶通濾波器(bandpass filter)
+              blockquote
+                p 用於濾除高頻雜訊或是穩定直流電壓
+            br
+            br
+            li
+              | .
+              span.item 二極體(Diode;D)
+              ul
+                li
+                  | 有「方向性」的元件
+                li
+                  | 一般細二極體為0.7伏特
+                li
+                  | 發光二極體為1.7伏特(隨顏色改變）
+                li
+                  | 特性曲線：垂直線
+                li
+                  | 細二極體灰色部分代表陰極
+                li
+                  | 與換算後的歐姆定律圖的交點為電路的電流
+                li
+                  | 每種顏色的發光二極體電壓降各有不同
+                li
+                  | 雖然特性曲線其實非理想性質
+                  br
+                  |         			但是因為實際上元件本來就會有誤差
+                  br
+                  |        			因此可以使用最好算的特性曲線（垂直線）
+                li
+                  a(href='http://irobot.ntue.edu.tw/physics/Electrical/basics/LED.html',target="_blank") LED
+                  | 、
+                  a(href='http://irobot.ntue.edu.tw/physics/Electrical/basics/Diode.html',target="_blank") 二極體
+                  | 、
+                  a(href='http://irobot.ntue.edu.tw/physics/Electrical/basics/PNJunction/PNJunction.htm',target="_blank") PN接面
+                  | （教學網站＿黃聰耀老師）
+                br
+                .tip
+                  p P型半導體
+                  blockquote
+                    p
+                      img(src='images/螢幕快照 2018-04-13 上午9.49.28.png',class="img-fluid",width='250', height='202', alt='')
+                    p
+                      | 摻入硼元素的矽晶體中，由於矽原子被雜質原子取代
+                      br
+                      |            			 	硼原子外層的三個外層電子與周圍的半導體原子成共價鍵
+                      br
+                      |            			 	並產生一個「電洞」
+                      br
+                      |            			 	這個電洞吸引束縛電子來裝滿，使得硼原子成為帶負電的離子
+                br
+                .tip
+                  p N型半導體
+                  blockquote
+                    p
+                      img(src='images/螢幕快照 2018-04-13 上午9.55.19.png',class="img-fluid", width='250', height='193', alt='')
+                    p
+                      | 摻入少量雜質磷元素的矽晶體中
+                      br
+                      |            			 由於矽原子被雜質原子取代
+                      br
+                      |            			 磷原子外層的五個外層電子的其中四個與周圍的半導體原子成共價鍵
+                      br
+                      |            			 多出的一個電子幾乎不受束縛，較為容易地成為自由電子
+                br
+                .tip
+                  p Depletion region(空乏層)
+                  blockquote
+                    | 在PN接面中，由於載子濃度的梯度，電洞、電子會通過擴散作用的形式分別向摻雜濃度低的N區、P區移動
+                    br
+                    |            			 擴散作用產生的少數載子會產生一個內在電場
+                    br
+                    |            			 這個電場會使載子發生漂移運動
+                    br
+                    |            			 這一運動與擴散的方向正好相反，二者會達成動態平衡。
+                    br
+                    |            			 這兩種作用的結果是在PN接面處形成一個電子、電洞都很稀少的空乏層
+                    br
+                    | 					＊取自 
+                    a(href='https://zh.wikipedia.org/wiki/耗尽层', target="_blank",title='空乏層') 維基百科
+                br
+                .tip
+                  p 半導體應用-整流
+                  blockquote
+                    p
+                      img(src='images/電路圖1.jpg',class="img-fluid", width='500', height='168', alt='')
+                      br
+                      img(src='images/電路圖2.jpg',class="img-fluid", width='500', height='158', alt='')
+          p 第一章的整理
+          p 就到這裡結束 
+          p 是不是對電子學稍微有點印象了呢？
+          p 話不遲疑 趕快點擊導覽列 繼續下一趟旅程囉！！
+          br
+          br
+        .jumbotron
+          h1.display-4 謝謝您的支持！！
+          br
+          p.lead
+            | 您的意見&nbsp;&nbsp;&nbsp;&nbsp;是我改進的原動力
+          p.lead
+            | 歡迎您將閱讀後的心得告訴我&nbsp;&nbsp;&nbsp;&nbsp;讓我可以更加進步～～
+          hr.my-4
+          p
+            img(src="images/emil_icon.png",class="img-fluid",width= "30px",alt="") 
+            |&nbsp;&nbsp;&nbsp;chen.oscar@hotmail.com
+          p
+            | 資訊科學系&nbsp;&nbsp;&nbsp;一年甲班&nbsp;&nbsp;&nbsp;陳泰元
+      #footer   陳泰元・普通物理（下）筆記網頁       
+      script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js', integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN', crossorigin='anonymous')
+      script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q', crossorigin='anonymous')
+      script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl', crossorigin='anonymous')
